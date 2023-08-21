@@ -1,0 +1,175 @@
+/*
+    IS727272 - Cordero Hernández, Marco Ricardo
+    
+    Tarea 1 - Página de Presentación
+    Nota: El diseño de esta página ha sido con un enfoque "desktop-first"
+*/
+
+@import url("https://fonts.googleapis.com/css?family=REM");
+
+body {
+    font-family: "REM";
+}
+
+nav div {
+    border: solid 1px gray;
+    width: 20%;
+    height: 70px;
+    float: left;
+    box-sizing: border-box;
+
+    text-align: center;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(white 30%, #ebebeb);
+}
+
+footer {
+    text-align: center;
+}
+
+nav::before, nav::after, footer::before {
+    content: "";
+    display: table;
+    clear: left;
+    margin-bottom: 20px;
+}
+
+a[href="#main_content"] {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+a[href="#main_content"]:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+nav > a, nav > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+img {
+    object-fit: cover;
+    user-select: none;
+}
+
+header img {
+    float: left;
+    margin-right: 15px;
+    height: 250px;
+}
+
+figure {
+    margin: 0;
+    top: 0;
+}
+
+header span {
+    font-size: x-large;
+    display: block;
+    margin-bottom: 10px;
+}
+
+section {
+    font-size: large;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+section > hr {
+    border: 2px solid black;
+}
+
+hr {
+    border: 0.5px solid lightgray;
+}
+
+article {
+    padding: 0 25px;
+}
+
+article div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv_link {
+    transition: 0.25s ease-out;
+}
+
+.cv_link:hover {
+    transform: scale(1.1);
+    background: #fafafa;
+}
+
+.fa {
+    margin-right: 8px;
+}
+
+.subtitle {
+    padding: 0 40px;
+}
+
+#skills_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1150px) {	
+    * {
+        transition: none !important;
+    }
+
+    nav div {
+        width: 50%;
+    }
+
+    section {
+        font-size: larger;
+    }
+
+    .cv_link:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 750px) {
+    * {
+        transition: none !important;
+    }
+    
+    nav div {
+        width: 100%;
+        height: 60px;
+    }
+
+    section {
+        font-size: x-large;
+    }
+
+    header img {
+        float: none;
+    }
+
+    article div, #skills_content {
+        display: initial;
+    }
+
+    .cv_link:hover {
+        transform: none;
+    }
+}
