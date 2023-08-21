@@ -38,7 +38,7 @@ nav::before, nav::after, footer::before {
     margin-bottom: 20px;
 }
 
-a[href="#main_content"] {
+#skip_to_main_content {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -47,7 +47,7 @@ a[href="#main_content"] {
     overflow: hidden;
 }
 
-a[href="#main_content"]:focus {
+#skip_to_main_content:focus {
     position: static;
     width: auto;
     height: auto;
