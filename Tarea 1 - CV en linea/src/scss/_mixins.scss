@@ -10,3 +10,7 @@
     clear: left;
     margin-bottom: 20px;
 }
+
+@mixin light-hr {
+    border: 0.5px solid lightgray;
+}

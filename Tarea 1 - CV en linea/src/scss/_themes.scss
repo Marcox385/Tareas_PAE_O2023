@@ -5,7 +5,10 @@ $base-font-uri: "https://fonts.googleapis.com/css?family=";
 $fonts: "REM" "Roboto Mono" "Ubuntu" "Jost";
 
 @function get-random-font($fonts) {
-    $rand-font: random(length($fonts));
+    $rand-font: "";
+    @for $_ from 1 through length($fonts) {
+        $rand-font: random(length($fonts));
+    }
     @return nth($fonts, $rand-font);
 }
 

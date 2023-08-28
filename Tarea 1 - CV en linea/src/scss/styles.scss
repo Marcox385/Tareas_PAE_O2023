@@ -130,7 +130,7 @@ section {
 }
 
 hr {
-    border: 0.5px solid lightgray;
+    @include light-hr;
 }
 
 article {
@@ -143,6 +143,10 @@ article {
         @include sm {
             display: initial;
         }
+    }
+
+    hr {
+        @include light-hr;
     }
 }
 
