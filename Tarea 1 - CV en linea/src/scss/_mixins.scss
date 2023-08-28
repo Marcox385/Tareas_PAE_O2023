@@ -1,0 +1,12 @@
+// IS727272 - Cordero Hernández, Marco Ricardo
+@mixin remove-space {
+    margin: 0;
+    top: 0;    
+}
+
+@mixin table-behaviour {
+    content: "";
+    display: table;
+    clear: left;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,6 @@
+# Archivos específicos
+*.zip
+
+# Directorios específicos
+Tareas/
+node_modules/

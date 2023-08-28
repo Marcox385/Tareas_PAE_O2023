@@ -1,0 +1,23 @@
+// IS727272 - Cordero Hernández, Marco Ricardo
+
+// Fonts
+$base-font-uri: "https://fonts.googleapis.com/css?family=";
+$fonts: "REM" "Roboto Mono" "Ubuntu" "Jost";
+
+@function get-random-font($fonts) {
+    $rand-font: random(length($fonts));
+    @return nth($fonts, $rand-font);
+}
+
+$base-font: get-random-font($fonts);
+@import url($base-font-uri + $base-font);
+
+// Colors
+$border-color: #808080;
+$gradient-start: #fff;
+$gradient-end: #ebebeb;
+$disabled: #000;
+$visited: #00f;
+
+// Behaviour
+$desktop-or-mobile: "max";
