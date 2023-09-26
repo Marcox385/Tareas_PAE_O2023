@@ -1,5 +1,6 @@
 # Archivos específicos
 *.zip
+*.env
 
 # Directorios específicos
 Tareas/
