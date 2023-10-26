@@ -1,0 +1,6 @@
+# Archivos específicos
+*.zip
+*.env
+
+# Directorios específicos
+node_modules/
