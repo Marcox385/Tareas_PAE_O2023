@@ -1,10 +1,12 @@
 <mat-toolbar color="primary">
     <span>Tarea 3</span>
-    <div *ngIf="true">
-        <a mat-flat-button color="primary" routerLink="#">Users</a>
-        <a mat-flat-button color="primary" routerLink="#">Photos</a>
+    <span class="spacer"></span>
+    <div *ngIf="loginStatus">
+        <a mat-flat-button color="primary" routerLink="home">Home</a>
+        <a mat-flat-button color="primary" (click)="logout()">Logout</a>
     </div>
-    <div>
-        <span class="spacer"></span>
+    <div *ngIf="!loginStatus">
+        <a mat-flat-button color="primary" routerLink="login">Login</a>
+        <a mat-flat-button color="primary" routerLink="signup">Sign up</a>
     </div>
 </mat-toolbar>

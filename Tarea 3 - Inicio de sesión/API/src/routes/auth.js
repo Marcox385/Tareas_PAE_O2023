@@ -88,15 +88,15 @@ router.delete('/logout', (req, res) => {
     if (refreshToken) {
         tokenModel.findOneAndDelete({token: refreshToken}).lean().then(response => {
             if (response) {
-                res.status(200).send('Token eliminado con éxito.');
+                res.status(200).send({msg: 'Token eliminado con éxito.'});
             } else {
-                res.status(404).send('Token no encontrado. Proceder con precaución.');
+                res.status(404).send({msg: 'Token no encontrado. Proceder con precaución.'});
             }
         });
         return;
     }
 
-    res.status(503).send('No fue posible eliminar el token. Proceder con precaución.');
+    res.status(503).send({msg: 'No fue posible eliminar el token. Proceder con precaución.'});
 });
 
 // Exportar router
