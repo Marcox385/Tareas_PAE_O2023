@@ -3,5 +3,4 @@
 *.env
 
 # Directorios específicos
-Tareas/
 node_modules/
