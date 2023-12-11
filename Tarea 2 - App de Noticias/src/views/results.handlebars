@@ -1,0 +1,14 @@
+<p>Total de resultados: {{total}}</p>
+{{#each articles}}
+<article>
+    <div>
+        <img src="{{this.urlToImage}}">
+
+        <p>{{this.title}}</p><br>
+        <p>{{this.description}}</p>
+        <hr>
+        <p>{{this.content}}</p>
+        <a href="{{this.url}}" target="_blank">Enlace a noticia original</a>
+    </div>
+</article>
+{{/each}}
