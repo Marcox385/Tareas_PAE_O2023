@@ -1,0 +1,17 @@
+{
+  "name": "tarea-1---cv-en-linea",
+  "version": "1.0.0",
+  "description": "Tarea para implementar scss",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run generate-styles && xdg-open ./src/index.html || explorer ./src/index.html || open ./src/index.html || echo \"Error. Try opening src\\index.html\" directly",
+    "test": "echo \"Testing 1,2 1,2\"",
+    "generate-styles": "sass src/scss:assets/styles --no-source-map",
+    "styles:dev": "sass src/scss:assets/styles --watch"
+  },
+  "author": "MRCH - IS727272",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}
